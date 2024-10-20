@@ -23,9 +23,4 @@ public sealed class UnitController : AbstractUnitController
         foreach (var handler in handlers) 
             handler.Update();
     }
-
-    public void SetWalkSpeed()
-    {
-        ((UnitModel)model).SetWalkSpeed();
-    }
 }

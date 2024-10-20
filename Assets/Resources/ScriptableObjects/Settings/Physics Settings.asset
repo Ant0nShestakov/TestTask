@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 451a7bdb17c4dbb439a6813fbacb9b4a, type: 3}
   m_Name: Physics Settings
   m_EditorClassIdentifier: 
-  <MinMass>k__BackingField: 80
+  <MinMass>k__BackingField: 85
   <MiddleMass>k__BackingField: 100
-  <MiddleMassDebuff>k__BackingField: 0.75
+  <MiddleMassDebuff>k__BackingField: 0.5
   <CapMass>k__BackingField: 120
-  <CapMassDebuff>k__BackingField: 0.5
+  <CapMassDebuff>k__BackingField: 0.25

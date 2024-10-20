@@ -8,7 +8,11 @@ public sealed class UnitMonoInsaller : MonoInstaller
 
     [Header("Unit")]
     [SerializeField] private UnitStats _unitStats;
-    [SerializeField] LayerMask _interactableLayers;
+
+    [Header("Interaction Settings")]
+    [SerializeField, Min(0.1f)] private float _interactionDistance;
+    [SerializeField] private LayerMask _interactionLayers;
+    [SerializeField] private Transform _handTransform;
 
     private void BindHandlers()
     {
@@ -16,7 +20,7 @@ public sealed class UnitMonoInsaller : MonoInstaller
 
         Container.Bind<Handler>().To<MovementHandler>().AsCached().WithArguments(unit);
         Container.Bind<Handler>().To<AimHandler>().AsCached().WithArguments(_cameraTransform, unit);
-        Container.Bind<Handler>().To<InteractionHandler>().AsCached().WithArguments(_interactableLayers);
+        Container.Bind<Handler>().To<InteractionHandler>().AsCached().WithArguments(_interactionLayers, _interactionDistance, _handTransform);
     }
     private void BindUnitModel()
     {
@@ -26,8 +30,8 @@ public sealed class UnitMonoInsaller : MonoInstaller
    
     private void BindFSM()
     {
-        Container.Bind<IActionStateVisitor>().To<MovementFSMVisitor>().AsCached();
-        Container.Bind<IAnimationFSM>().To<MovementFSM>().AsCached().WithArguments(GetComponent<UnitView>());
+        Container.Bind<IMovementActionStateVisitor>().To<MovementFSMVisitor>().AsCached();
+        Container.Bind<IUpdatedAnimationFSM>().To<MovementFSM>().AsCached().WithArguments(GetComponent<UnitView>());
     }
 
     public override void InstallBindings()

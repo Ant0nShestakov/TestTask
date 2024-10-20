@@ -1,25 +1,28 @@
 using System.Collections.Generic;
 
-public sealed class RunState : ActionState
+public sealed class RunState : IUpdatedActionState
 {
-    public RunState(InputManager inputManager) : base(inputManager)
+    private readonly InputManager _inputManager;
+
+    public RunState(InputManager inputManager)
     {
+        _inputManager = inputManager;
     }
 
-    public override void EnterState(IAnimationFSM fsm)
+    public void EnterState(IAnimationFSM fsm)
     {
-        fsm.Visitor.Visit(this);
+        ((IMovementFSM)fsm).Visitor.Visit(this);
         fsm.Animator.SetBool("Run", true);
     }
 
-    public override void ExitState(IAnimationFSM fsm)
+    public void ExitState(IAnimationFSM fsm)
     {
         fsm.Animator.SetBool("Run", false);
     }
 
-    public override void UpdateState(IAnimationFSM fsm)
+    public void UpdateState(IUpdatedAnimationFSM fsm)
     {
-        if (inputManager.RunValue == 0)
+        if (_inputManager.RunValue == 0)
             fsm.SwitchState(fsm.States.GetValueOrDefault(typeof(WalkState)));
         else if (!((IMovementFSM)fsm).IsGrounded)
             fsm.SwitchState(fsm.States.GetValueOrDefault(typeof(FallState)));

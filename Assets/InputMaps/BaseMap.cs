@@ -46,15 +46,6 @@ public partial class @BaseMap: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": true
                 },
                 {
-                    ""name"": ""Shoot"",
-                    ""type"": ""Button"",
-                    ""id"": ""a0ea4d07-b4a2-4545-92cf-a175ecd73d60"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": ""Press(behavior=2)"",
-                    ""initialStateCheck"": false
-                },
-                {
                     ""name"": ""Jump"",
                     ""type"": ""Button"",
                     ""id"": ""3e601d1c-027a-4029-8c0e-3d0d69db691e"",
@@ -62,15 +53,6 @@ public partial class @BaseMap: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": ""Press(behavior=2)"",
                     ""initialStateCheck"": true
-                },
-                {
-                    ""name"": ""Reload"",
-                    ""type"": ""Button"",
-                    ""id"": ""7113bb72-3e94-49d0-ac89-c75223c29022"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": ""Press(behavior=2)"",
-                    ""initialStateCheck"": false
                 },
                 {
                     ""name"": ""Run"",
@@ -82,39 +64,12 @@ public partial class @BaseMap: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Crouch"",
+                    ""name"": ""Interact"",
                     ""type"": ""Button"",
-                    ""id"": ""bb2c9654-ef9b-43b3-9a34-91a105854030"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": ""Press(behavior=2)"",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""Inventory"",
-                    ""type"": ""Button"",
-                    ""id"": ""49a72078-b034-452a-9468-1d816a7dd4a9"",
-                    ""expectedControlType"": """",
+                    ""id"": ""b1ebe9d7-b763-4d23-a7b7-fbe15397e0fa"",
+                    ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""Crawl"",
-                    ""type"": ""Button"",
-                    ""id"": ""c95c727c-97d7-4638-98f1-677ef84fb89e"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": ""Press(behavior=2)"",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""Laser"",
-                    ""type"": ""Button"",
-                    ""id"": ""eeeda903-6c5a-4c76-96e7-3a5a24883a20"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": ""Tap"",
                     ""initialStateCheck"": false
                 }
             ],
@@ -187,34 +142,12 @@ public partial class @BaseMap: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""3cbb7995-82f5-46a7-87e9-4000f6efc146"",
-                    ""path"": ""<Mouse>/leftButton"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Mouse&Button"",
-                    ""action"": ""Shoot"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""5593ee35-13a2-436e-87f4-f981160707ca"",
                     ""path"": ""<Keyboard>/space"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";Mouse&Button"",
                     ""action"": ""Jump"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""4f8e6ae3-dcbc-4570-a4f7-63b0e711f954"",
-                    ""path"": ""<Keyboard>/r"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Reload"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -231,45 +164,12 @@ public partial class @BaseMap: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""475ab350-c7a5-4b1f-984d-a3f4b96100d8"",
-                    ""path"": ""<Keyboard>/leftCtrl"",
+                    ""id"": ""8a0935d4-a5ff-4625-a0a6-88c0ea1538a0"",
+                    ""path"": ""<Keyboard>/e"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Crouch"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""00a086c2-aee2-4b85-be15-0d8a6771c4b8"",
-                    ""path"": ""<Keyboard>/i"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Inventory"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""0828ebc0-d558-41e3-a3fe-d3cc3d86cd6e"",
-                    ""path"": ""<Keyboard>/x"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": "";Mouse&Button"",
-                    ""action"": ""Crawl"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""0a1be655-7d10-4ff2-9a85-c8ff90cd10ff"",
-                    ""path"": ""<Keyboard>/v"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Laser"",
+                    ""groups"": ""Mouse&Button"",
+                    ""action"": ""Interact"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -299,14 +199,9 @@ public partial class @BaseMap: IInputActionCollection2, IDisposable
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
         m_Player_Look = m_Player.FindAction("Look", throwIfNotFound: true);
-        m_Player_Shoot = m_Player.FindAction("Shoot", throwIfNotFound: true);
         m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
-        m_Player_Reload = m_Player.FindAction("Reload", throwIfNotFound: true);
         m_Player_Run = m_Player.FindAction("Run", throwIfNotFound: true);
-        m_Player_Crouch = m_Player.FindAction("Crouch", throwIfNotFound: true);
-        m_Player_Inventory = m_Player.FindAction("Inventory", throwIfNotFound: true);
-        m_Player_Crawl = m_Player.FindAction("Crawl", throwIfNotFound: true);
-        m_Player_Laser = m_Player.FindAction("Laser", throwIfNotFound: true);
+        m_Player_Interact = m_Player.FindAction("Interact", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -370,28 +265,18 @@ public partial class @BaseMap: IInputActionCollection2, IDisposable
     private List<IPlayerActions> m_PlayerActionsCallbackInterfaces = new List<IPlayerActions>();
     private readonly InputAction m_Player_Move;
     private readonly InputAction m_Player_Look;
-    private readonly InputAction m_Player_Shoot;
     private readonly InputAction m_Player_Jump;
-    private readonly InputAction m_Player_Reload;
     private readonly InputAction m_Player_Run;
-    private readonly InputAction m_Player_Crouch;
-    private readonly InputAction m_Player_Inventory;
-    private readonly InputAction m_Player_Crawl;
-    private readonly InputAction m_Player_Laser;
+    private readonly InputAction m_Player_Interact;
     public struct PlayerActions
     {
         private @BaseMap m_Wrapper;
         public PlayerActions(@BaseMap wrapper) { m_Wrapper = wrapper; }
         public InputAction @Move => m_Wrapper.m_Player_Move;
         public InputAction @Look => m_Wrapper.m_Player_Look;
-        public InputAction @Shoot => m_Wrapper.m_Player_Shoot;
         public InputAction @Jump => m_Wrapper.m_Player_Jump;
-        public InputAction @Reload => m_Wrapper.m_Player_Reload;
         public InputAction @Run => m_Wrapper.m_Player_Run;
-        public InputAction @Crouch => m_Wrapper.m_Player_Crouch;
-        public InputAction @Inventory => m_Wrapper.m_Player_Inventory;
-        public InputAction @Crawl => m_Wrapper.m_Player_Crawl;
-        public InputAction @Laser => m_Wrapper.m_Player_Laser;
+        public InputAction @Interact => m_Wrapper.m_Player_Interact;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -407,30 +292,15 @@ public partial class @BaseMap: IInputActionCollection2, IDisposable
             @Look.started += instance.OnLook;
             @Look.performed += instance.OnLook;
             @Look.canceled += instance.OnLook;
-            @Shoot.started += instance.OnShoot;
-            @Shoot.performed += instance.OnShoot;
-            @Shoot.canceled += instance.OnShoot;
             @Jump.started += instance.OnJump;
             @Jump.performed += instance.OnJump;
             @Jump.canceled += instance.OnJump;
-            @Reload.started += instance.OnReload;
-            @Reload.performed += instance.OnReload;
-            @Reload.canceled += instance.OnReload;
             @Run.started += instance.OnRun;
             @Run.performed += instance.OnRun;
             @Run.canceled += instance.OnRun;
-            @Crouch.started += instance.OnCrouch;
-            @Crouch.performed += instance.OnCrouch;
-            @Crouch.canceled += instance.OnCrouch;
-            @Inventory.started += instance.OnInventory;
-            @Inventory.performed += instance.OnInventory;
-            @Inventory.canceled += instance.OnInventory;
-            @Crawl.started += instance.OnCrawl;
-            @Crawl.performed += instance.OnCrawl;
-            @Crawl.canceled += instance.OnCrawl;
-            @Laser.started += instance.OnLaser;
-            @Laser.performed += instance.OnLaser;
-            @Laser.canceled += instance.OnLaser;
+            @Interact.started += instance.OnInteract;
+            @Interact.performed += instance.OnInteract;
+            @Interact.canceled += instance.OnInteract;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -441,30 +311,15 @@ public partial class @BaseMap: IInputActionCollection2, IDisposable
             @Look.started -= instance.OnLook;
             @Look.performed -= instance.OnLook;
             @Look.canceled -= instance.OnLook;
-            @Shoot.started -= instance.OnShoot;
-            @Shoot.performed -= instance.OnShoot;
-            @Shoot.canceled -= instance.OnShoot;
             @Jump.started -= instance.OnJump;
             @Jump.performed -= instance.OnJump;
             @Jump.canceled -= instance.OnJump;
-            @Reload.started -= instance.OnReload;
-            @Reload.performed -= instance.OnReload;
-            @Reload.canceled -= instance.OnReload;
             @Run.started -= instance.OnRun;
             @Run.performed -= instance.OnRun;
             @Run.canceled -= instance.OnRun;
-            @Crouch.started -= instance.OnCrouch;
-            @Crouch.performed -= instance.OnCrouch;
-            @Crouch.canceled -= instance.OnCrouch;
-            @Inventory.started -= instance.OnInventory;
-            @Inventory.performed -= instance.OnInventory;
-            @Inventory.canceled -= instance.OnInventory;
-            @Crawl.started -= instance.OnCrawl;
-            @Crawl.performed -= instance.OnCrawl;
-            @Crawl.canceled -= instance.OnCrawl;
-            @Laser.started -= instance.OnLaser;
-            @Laser.performed -= instance.OnLaser;
-            @Laser.canceled -= instance.OnLaser;
+            @Interact.started -= instance.OnInteract;
+            @Interact.performed -= instance.OnInteract;
+            @Interact.canceled -= instance.OnInteract;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -495,13 +350,8 @@ public partial class @BaseMap: IInputActionCollection2, IDisposable
     {
         void OnMove(InputAction.CallbackContext context);
         void OnLook(InputAction.CallbackContext context);
-        void OnShoot(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
-        void OnReload(InputAction.CallbackContext context);
         void OnRun(InputAction.CallbackContext context);
-        void OnCrouch(InputAction.CallbackContext context);
-        void OnInventory(InputAction.CallbackContext context);
-        void OnCrawl(InputAction.CallbackContext context);
-        void OnLaser(InputAction.CallbackContext context);
+        void OnInteract(InputAction.CallbackContext context);
     }
 }

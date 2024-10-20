@@ -24,15 +24,6 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Shoot",
-                    "type": "Button",
-                    "id": "a0ea4d07-b4a2-4545-92cf-a175ecd73d60",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "Press(behavior=2)",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "Jump",
                     "type": "Button",
                     "id": "3e601d1c-027a-4029-8c0e-3d0d69db691e",
@@ -40,15 +31,6 @@
                     "processors": "",
                     "interactions": "Press(behavior=2)",
                     "initialStateCheck": true
-                },
-                {
-                    "name": "Reload",
-                    "type": "Button",
-                    "id": "7113bb72-3e94-49d0-ac89-c75223c29022",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "Press(behavior=2)",
-                    "initialStateCheck": false
                 },
                 {
                     "name": "Run",
@@ -60,39 +42,12 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Crouch",
+                    "name": "Interact",
                     "type": "Button",
-                    "id": "bb2c9654-ef9b-43b3-9a34-91a105854030",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "Press(behavior=2)",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Inventory",
-                    "type": "Button",
-                    "id": "49a72078-b034-452a-9468-1d816a7dd4a9",
-                    "expectedControlType": "",
+                    "id": "b1ebe9d7-b763-4d23-a7b7-fbe15397e0fa",
+                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Crawl",
-                    "type": "Button",
-                    "id": "c95c727c-97d7-4638-98f1-677ef84fb89e",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "Press(behavior=2)",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Laser",
-                    "type": "Button",
-                    "id": "eeeda903-6c5a-4c76-96e7-3a5a24883a20",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "Tap",
                     "initialStateCheck": false
                 }
             ],
@@ -165,34 +120,12 @@
                 },
                 {
                     "name": "",
-                    "id": "3cbb7995-82f5-46a7-87e9-4000f6efc146",
-                    "path": "<Mouse>/leftButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Mouse&Button",
-                    "action": "Shoot",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "5593ee35-13a2-436e-87f4-f981160707ca",
                     "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Mouse&Button",
                     "action": "Jump",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "4f8e6ae3-dcbc-4570-a4f7-63b0e711f954",
-                    "path": "<Keyboard>/r",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Reload",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -209,45 +142,12 @@
                 },
                 {
                     "name": "",
-                    "id": "475ab350-c7a5-4b1f-984d-a3f4b96100d8",
-                    "path": "<Keyboard>/leftCtrl",
+                    "id": "8a0935d4-a5ff-4625-a0a6-88c0ea1538a0",
+                    "path": "<Keyboard>/e",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
-                    "action": "Crouch",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "00a086c2-aee2-4b85-be15-0d8a6771c4b8",
-                    "path": "<Keyboard>/i",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Inventory",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "0828ebc0-d558-41e3-a3fe-d3cc3d86cd6e",
-                    "path": "<Keyboard>/x",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";Mouse&Button",
-                    "action": "Crawl",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "0a1be655-7d10-4ff2-9a85-c8ff90cd10ff",
-                    "path": "<Keyboard>/v",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Laser",
+                    "groups": "Mouse&Button",
+                    "action": "Interact",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

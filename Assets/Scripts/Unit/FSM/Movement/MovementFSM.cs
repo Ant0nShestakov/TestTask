@@ -8,21 +8,21 @@ public sealed class MovementFSM : IMovementFSM
     private readonly InputManager _inputManager;
     private readonly PhysicsController _physicsController;
 
-    private readonly IActionStateVisitor _fSMVisitor;
+    private readonly IMovementActionStateVisitor _fSMVisitor;
 
-    private ActionState _currentState;
+    private IUpdatedActionState _currentState;
 
-    private Dictionary<Type, ActionState> _states;
+    private Dictionary<Type, IActionState> _states;
 
     public bool IsGrounded => _physicsController.IsGrounded;
 
-    public IReadOnlyDictionary<Type, ActionState> States => _states;
+    public IReadOnlyDictionary<Type, IActionState> States => _states;
 
     public Animator Animator => _animator;
 
-    public IActionStateVisitor Visitor => _fSMVisitor;
+    public IMovementActionStateVisitor Visitor => _fSMVisitor;
 
-    public MovementFSM(UnitView unitView, IActionStateVisitor fSMVisitor)
+    public MovementFSM(UnitView unitView, IMovementActionStateVisitor fSMVisitor)
     {
         _animator = unitView.GetComponent<Animator>();
         _inputManager = unitView.GetComponent<InputManager>();
@@ -31,16 +31,16 @@ public sealed class MovementFSM : IMovementFSM
 
         Initialize();
 
-        _currentState = _states.GetValueOrDefault(typeof(WalkState));
+        _currentState = (IUpdatedActionState)_states.GetValueOrDefault(typeof(WalkState));
     }
 
     private void Initialize()
     {
-        _states = new Dictionary<Type, ActionState>
+        _states = new Dictionary<Type, IActionState>
         {
             { typeof(WalkState), new WalkState(_inputManager) },
             { typeof(RunState), new RunState(_inputManager) },
-            { typeof(FallState), new FallState(_inputManager) },
+            { typeof(FallState), new FallState() },
         };
     }
 
@@ -49,11 +49,14 @@ public sealed class MovementFSM : IMovementFSM
         _currentState.UpdateState(this);
     }
 
-    public void SwitchState(ActionState actionState)
+    public void SwitchState(IActionState actionState)
     {
+        if (actionState is not IUpdatedActionState state)
+            return;
+
         _currentState.ExitState(this);
 
-       _currentState = actionState ?? throw new NullReferenceException();
+        _currentState = state;
 
         _currentState.EnterState(this); 
     }

@@ -18,12 +18,15 @@ public sealed class AimHandler : Handler
         _rootTransform = controller.transform;
 
         _clampAngle = new Vector2 (this.inputManager.MinClampAngle, this.inputManager.MaxClampAngle);
+
+        _mouseX = _rootTransform.rotation.eulerAngles.y; 
+        _mouseY = _cameraTransform.localRotation.eulerAngles.y;
     }
 
     public override void Update()
     {
-        _mouseX += inputManager.MouseVector.x * Time.deltaTime;
-        _mouseY -= inputManager.MouseVector.y * Time.deltaTime;
+        _mouseX += inputManager.MouseVector.x;
+        _mouseY -= inputManager.MouseVector.y;
 
         _mouseY = Mathf.Clamp(_mouseY, _clampAngle.x, _clampAngle.y);
 

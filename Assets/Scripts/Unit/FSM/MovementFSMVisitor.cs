@@ -1,4 +1,4 @@
-public sealed class MovementFSMVisitor : IActionStateVisitor
+public sealed class MovementFSMVisitor : IMovementActionStateVisitor
 {
     private readonly AbstractUnitModel _unitModel;
 

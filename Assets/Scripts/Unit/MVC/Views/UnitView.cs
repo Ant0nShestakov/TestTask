@@ -13,12 +13,12 @@ public sealed class UnitView : MonoBehaviour
 
     private Animator _animator;
 
-    private IAnimationFSM[] _fsms;
+    private IUpdatedAnimationFSM[] _fsms;
     
     public Animator Animator => _animator;
 
     [Inject]
-    public void Construct(IAnimationFSM[] fsms)
+    public void Construct(IUpdatedAnimationFSM[] fsms)
     {
         _fsms = fsms;
     }

@@ -10,7 +10,6 @@ public abstract class AbstractUnitModel
     public float CurrentJumpForce { get => stats.JumpForce; }
     public float CurrentMass { get => currentMass; }
 
-
     public AbstractUnitModel(UnitStats stats)
     {
         this.stats = stats;
@@ -18,4 +17,7 @@ public abstract class AbstractUnitModel
         currentMass = stats.Mass;
         CurrentSpeed = stats.WalkingSpeed;
     }
+
+    public void AddMass(float mass) => currentMass += mass;
+    public void RemoveMass(float mass) => currentMass -= mass;
 }
